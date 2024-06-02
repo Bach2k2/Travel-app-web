@@ -1,10 +1,9 @@
 <script setup>
 import { useRouter } from 'vue-router'
 import { useDarkModeStore } from '@/stores/darkMode.js'
-import { gradientBgPurplePink } from '@/colors.js'
+import { gradientBgPurplePink } from '@/configs/colors.js'
 import SectionMain from '@/components/SectionMain.vue'
 import CardBox from '@/components/CardBox.vue'
-import LayoutGuest from '@/layouts/LayoutGuest.vue'
 
 const styles = ['white', 'basic']
 
@@ -26,7 +25,6 @@ const handleStyleChange = (slug) => {
 </script>
 
 <template>
-  <LayoutGuest>
     <div :class="gradientBgPurplePink" class="flex min-h-screen items-center justify-center">
       <SectionMain>
         <h1 class="text-4xl md:text-5xl text-center text-white font-bold mt-12 mb-3 lg:mt-0">
@@ -60,5 +58,4 @@ const handleStyleChange = (slug) => {
         </div>
       </SectionMain>
     </div>
-  </LayoutGuest>
 </template>
